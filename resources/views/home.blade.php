@@ -7,7 +7,7 @@
             <img class="rounded-circle" src="/images/fccLogo.png" alt="fccLogo">
         </div>
         <div class="col-9 pt-5" >
-            <div><h1>freeCodeCamp</h1></div>
+            <div><h1>{{ $user->username }}</h1></div>
             <div class="d-flex">
                 <div class="col-3">posts</div>
                 <div class="col-3">following</div>
