@@ -7,19 +7,22 @@
             <img class="rounded-circle" src="/images/fccLogo.png" alt="fccLogo">
         </div>
         <div class="col-9 pt-5" >
-            <div><h1>{{ $user->username }}</h1></div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add post</a>
+            </div>
             <div class="d-flex">
                 <div class="col-3">posts</div>
                 <div class="col-3">following</div>
                 <div class="col-3">followers</div>
             </div>
             <div class="pt-4">
-                <strong>freeCodeCamp</strong>
+                <strong>{{ $user->profile->title }} </strong>
             </div>
             <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium pariatur totam a facere voluptate blanditiis expedita ut! Incidunt, fuga. Eaque qui veniam velit minus.
+                {{ $user->profile->description }}
             </div>
-            <a href="https://freeCodeCamp.org">freeCodeCamp.org</a>
+            <a href="#">{{ $user->profile->url ?? 'N/A' }}</a>
         </div>
         <div class="row pt-4">
             <div class="col-4">
