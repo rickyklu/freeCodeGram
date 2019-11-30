@@ -13,9 +13,9 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="name" class="col-md-4 col-form-label">Image Caption</label>
+                    <label for="caption" class="col-md-4 col-form-label">Image Caption</label>
 
-                    <input id="name" name="caption" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input id="caption" name="caption" type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('caption') }}" required autocomplete="name" autofocus>
 
                     @if ($errors->has('caption'))
                     <span class="invalid-feedback" role="alert">

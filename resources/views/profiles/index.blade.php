@@ -11,6 +11,7 @@
                 <h1>{{ $user->username }}</h1>
                 <a href="/p/create">Add post</a>
             </div>
+            <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
             <div class="d-flex">
                 <div class="col-3"><strong>{{ $user->posts->count() }} </strong>posts</div>
                 <div class="col-3"><strong>{{ $user->posts->count() }} </strong>following</div>
@@ -27,7 +28,7 @@
         <div class="row pt-4">
             @foreach($user->posts as $post)
             <div class="col-4 pb-4">
-                <a href="#">
+                <a href="/p/{{ $post->id }}">
                     <img class="w-100" src="/storage/{{ $post->image }}" alt="">
                 </a>
             </div>
