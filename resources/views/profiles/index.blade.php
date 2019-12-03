@@ -4,11 +4,14 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-        <img class="rounded-circle w-100" src="/storage/{{ $user->profile->image }}" alt="fccLogo">
+        <img class="rounded-circle w-100" src="{{ $user->profile->profileImage() }}" alt="fccLogo">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
-                <h1>{{ $user->username }}</h1>
+                <div class="d-flex align-items-center pb-3">
+                    <h1>{{ $user->username }}</h1>
+                    <button class="btn btn-primary p-1 ml-3">Follow</button>
+                </div>
 
                 @can('update', $user->profile)
                 <a href="/p/create">Add post</a>
