@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-        <img class="rounded-circle w-100" src="{{ $user->profile->profileImage() }}" alt="fccLogo">
+            <img class="rounded-circle w-100" src="{{ $user->profile->profileImage() }}" alt="fccLogo">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -16,7 +16,7 @@
                 @can('update', $user->profile)
                 <a href="/p/create">Add post</a>
                 @endcan
-                
+
             </div>
 
             @can('update', $user->profile)
@@ -24,9 +24,9 @@
             @endcan
 
             <div class="d-flex">
-                <div class="col-3"><strong>{{ $user->posts->count() }} </strong>posts</div>
-                <div class="col-3"><strong>{{ $user->profile->follower->count() }} </strong>followers</div>
-                <div class="col-3"><strong>{{ $user->following->count() }} </strong>following</div>
+                <div class="col-3"><strong>{{ $postCount }} </strong>posts</div>
+                <div class="col-3"><strong>{{ $followersCount }} </strong>followers</div>
+                <div class="col-3"><strong>{{ $followingCount }} </strong>following</div>
             </div>
             <div class="pt-4">
                 <strong>{{ $user->profile->title }} </strong>
